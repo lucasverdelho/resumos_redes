@@ -1,4 +1,4 @@
-# 1. Application Layer Summary
+# **1. Application Layer Summary**
 
 ## Application Layer Goals
 - Understand the conceptual and implementation aspects of network application protocols.
@@ -35,7 +35,7 @@
 - Applications use specific protocols tailored for their requirements, ensuring effective communication and services delivery across the network.
 - Socket programming provides the tools to build these network applications, allowing interaction between processes over the network.
 
-# 2. Multicast: Introduction to Group Communications in TCP/IP Networks
+# **2. Multicast: Introduction to Group Communications in TCP/IP Networks** 
 
 ## Essentials of Multicast
 
@@ -76,7 +76,7 @@
 In summary, multicast is a method of network communication that allows for efficient data distribution to multiple recipients. It employs group membership protocols and multicast routing protocols to manage distribution, offering a more resource-efficient alternative to multiple unicast transmissions, especially beneficial for applications like live video broadcasting or group communications.
 
 
-# 3. Multimedia Networking Summary
+# **3. Multimedia Networking Summary**
 
 ## Multimedia Networking Applications
 - Applications such as streaming stored audio/video, conversational voice/video over IP, and streaming live audio/video represent the primary focus of multimedia networking.
@@ -111,7 +111,7 @@ In summary, multicast is a method of network communication that allows for effic
 Chapter 9 emphasizes the significance of understanding multimedia networking applications, the challenges in delivering continuous media over networks, and the protocols and network support mechanisms necessary to provide efficient and quality multimedia communication.
 
 
-# 4. SIP (Session Initiation Protocol) Summary
+# **4. SIP (Session Initiation Protocol) Summary**
 
 ## Purpose of SIP
 - SIP is an application-layer control (signaling) protocol for creating, modifying, and terminating sessions with one or more participants. It's used extensively for Internet telephone calls, multimedia distribution, and multimedia conferences.
@@ -142,7 +142,7 @@ Chapter 9 emphasizes the significance of understanding multimedia networking app
 SIP is a robust and flexible protocol for initiating, modifying, and terminating multimedia sessions over the internet. It forms the backbone of modern telecommunication and multimedia services, facilitating features like voice calls, video conferencing, and message exchange in a versatile and efficient manner.
 
 
-# 5. RTP (Real-Time Protocol) and RTCP (Real-Time Control Protocol) Summary
+# **5. RTP (Real-Time Protocol) and RTCP (Real-Time Control Protocol) Summary**
 
 ## Overview
 - **RTP:** Provides end-to-end delivery services for data with real-time characteristics, such as interactive audio and video. It is widely used for videoconferencing and IP telephony.
@@ -168,3 +168,31 @@ SIP is a robust and flexible protocol for initiating, modifying, and terminating
 
 ## Summary
 RTP and RTCP form a critical part of multimedia communication protocols by enabling the real-time transmission and control of audio and video data over IP networks. They provide mechanisms for timing reconstruction, loss detection, content identification, and quality feedback, which are essential for maintaining the quality and synchronization of multimedia streams.
+
+---
+# **6. SCTP (Stream Control Transmission Protocol) and QUIC (Quick UDP Internet Connections) Summary**
+
+## SCTP Overview
+- **Purpose**: SCTP is designed to transport PSTN signaling messages over IP networks, but is also capable of serving as a general-purpose transport layer protocol.
+- **Reliability and Stream Control**: It combines the reliability of TCP with the speed and multi-streaming capabilities of UDP.
+- **Key Features**: 
+    - **Multistreaming**: Allows multiple streams within one connection, helping to avoid head-of-line blocking.
+    - **Multihoming**: Supports multiple network paths for resilience.
+    - **Partial Reliability**: Offers optional reliability on a per-message basis.
+    - **Preservation of Message Boundaries**: Unlike TCP's byte-stream, SCTP maintains message limits.
+
+## QUIC Overview
+- **Purpose**: QUIC is a general-purpose transport layer network protocol initially developed by Google, which combines features of TCP and UDP with quick connection establishment, improved security, and multiplexing.
+- **Speed and Security**: Designed for low-latency connections, QUIC integrates transport layer features with TLS encryption by default.
+- **Key Features**: 
+    - **Stream Multiplexing**: Handling multiple streams of data in parallel over a single connection, avoiding the head-of-line blocking.
+    - **Fast Handshakes**: Reduced connection and transport latency.
+    - **Path Migration**: Supports changing the network path mid-connection.
+    - **Flow Control**: Implements a sophisticated flow control mechanism.
+
+## SCTP and QUIC in Networking
+- **Adaptability**: Both SCTP and QUIC address specific limitations of TCP and UDP by providing more robust, efficient, and adaptable transport mechanisms suitable for a range of applications including telephony, web traffic, and real-time communications.
+- **Comparison to TCP and UDP**: While SCTP and QUIC borrow concepts from both TCP and UDP, they introduce unique features like multi-streaming and multi-homing (SCTP), or fast encryption setup and stream multiplexing (QUIC), setting them apart as more versatile transport protocols.
+
+## Summary
+SCTP and QUIC are modern transport protocols designed for more efficient, secure, and reliable data transmission across the network. SCTP is recognized for its multistreaming and multihoming capabilities, while QUIC is noted for its rapid connection establishment and integrated security. Both are substantial improvements over traditional TCP and UDP, catering to the dynamic and versatile needs of modern networking applications.
